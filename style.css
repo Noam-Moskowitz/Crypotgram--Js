@@ -104,6 +104,10 @@ button:hover {
     background-color: rgb(235, 235, 235);
 }
 
+#focused-element {
+    visibility: hidden;
+}
+
 @media(max-width:500px) {
     .container {
         justify-content: start;

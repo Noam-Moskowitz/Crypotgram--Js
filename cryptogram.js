@@ -6,6 +6,9 @@ let selected = screen;
 let errors = 0;
 let restartBtn = document.createElement('button');
 
+//envokes keyboard on mobile
+document.getElementById(`focused-element`).focus();
+
 const getRandomQuote = () => {
     const randomNum = Math.floor(Math.random() * quoteBank.length)
     return quoteBank[randomNum]
@@ -138,4 +141,4 @@ const displayWinOrLose = (status) => {
     restartBtn.textContent = `Restart`
     banner.appendChild(restartBtn);
     banner.style.display = `flex`;
-}
+};
