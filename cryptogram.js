@@ -71,7 +71,6 @@ screen.addEventListener('click', (event) => {
         selected.classList.add('selected')
         hiddenInput.style.visibility = 'visible';
         hiddenInput.focus({ preventScroll: true });
-        hiddenInput.style.visibility = 'hidden';
     }
 });
 
