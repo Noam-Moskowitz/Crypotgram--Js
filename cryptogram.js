@@ -5,9 +5,9 @@ const screen = document.getElementById('screen');
 let selected = screen;
 let errors = 0;
 let restartBtn = document.createElement('button');
+const hiddenInput = document.getElementById(`focused-element`);
 
 //envokes keyboard on mobile
-document.getElementById(`focused-element`).focus();
 
 const getRandomQuote = () => {
     const randomNum = Math.floor(Math.random() * quoteBank.length)
@@ -69,6 +69,9 @@ screen.addEventListener('click', (event) => {
         selected.classList.remove('selected')
         selected = event.target
         selected.classList.add('selected')
+        hiddenInput.style.visibility = 'visible';
+        hiddenInput.focus({ preventScroll: true });
+        hiddenInput.style.visibility = 'hidden';
     }
 });
 

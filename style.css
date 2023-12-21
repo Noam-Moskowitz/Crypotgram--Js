@@ -105,6 +105,9 @@ button:hover {
 }
 
 #focused-element {
+    border: none;
+    background-color: wheat;
+    color: wheat;
     visibility: hidden;
 }
 
