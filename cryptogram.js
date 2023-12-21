@@ -10,7 +10,7 @@ const hiddenInput = document.getElementById(`focused-element`);
 //envokes keyboard on mobile
 
 const getRandomQuote = () => {
-    const randomNum = Math.floor(Math.random() * quoteBank.length)
+    const randomNum = Math.floor(Math.random() * quoteBank.length + 1)
     return quoteBank[randomNum]
 }
 
@@ -20,7 +20,6 @@ const resortArray = () => {
 }
 
 const createBoard = (quote, resortedArr) => {
-    console.log(quote);
     let words = quote.split(' ');
 
     for (word of words) {
